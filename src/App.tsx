@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Home } from "./pages/Home";
+import { Navbar } from "./comp/Navbar";
+import { useEffect } from "react";
+import { useMedia } from "./hooks/useMedia";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
-function App() {
+export const App = () => {
+  const { large } = useMedia();
+  useEffect(() => {
+    if (large === true) {
+      gsap.from(".App", {
+        y: 0,
+        scrollTrigger: {
+          trigger: ".App",
+          start: "top bottom",
+          end: "+=1500",
+          scrub: 2,
+        },
+      });
+    }
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Home />
     </div>
   );
-}
-
-export default App;
+};

@@ -1,38 +1,82 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #111;
+  color: #fff;
+  padding: 0 10%;
+  overflow-x: hidden;
+}
+@media (min-width: 993px) {
+  body {
+    padding: 0 15%;
+  }
+}
+
+/*---------- basic styles ---------*/
+
+img {
+  width: 100%;
+}
+
+.blk {
+  display: block;
+}
+
+.z {
+  position: relative;
+  z-index: 2;
+}
+
+.h1Big {
+  font-size: 80px;
+}
+
+.h1Small {
+  font-size: 62px;
+}
+
+.pLrg {
+  font-size: 27px;
+}
+
+i {
+  font-size: 20px;
+}
+/*---------- pre-styles ----------*/
+
+.centerText {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flexCol {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.flexNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.paddingB {
+  padding-bottom: 7rem;
 }
