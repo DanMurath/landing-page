@@ -3,6 +3,9 @@
   margin: 0;
   padding: 0;
 }
+html {
+  overflow-x: hidden; /* needed on html and body */
+}
 
 body {
   margin: 0;
@@ -79,4 +82,34 @@ i {
 
 .paddingB {
   padding-bottom: 7rem;
+}
+
+/*------- styles --------*/
+/*
+.cir:hover {
+  border: 1px solid #fff;
+  cursor: pointer;
+}*/
+
+.b1,
+.b2,
+.b3,
+.fl,
+.cords {
+  color: #444;
+  position: absolute;
+  font-size: 50px;
+}
+
+.cords {
+  font-size: 17px;
+}
+
+@media (min-width: 2500px) {
+  .pLrg {
+    font-size: 54px;
+  }
+  h3 {
+    font-size: 58px;
+  }
 }

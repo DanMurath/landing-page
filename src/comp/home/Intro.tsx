@@ -9,7 +9,7 @@ export const Intro: React.FC = () => {
     <div className="intro centerText">
       <h1 className={large ? "h1Big" : "h1Small"}>RIDER.404</h1>
       <div
-        className="vid"
+        className="vid z"
         style={{
           height: "70vh",
           position: "relative",
@@ -21,7 +21,7 @@ export const Intro: React.FC = () => {
           loop
           muted
           playsInline
-          style={styles.vid}
+          style={large ? styles.vidLrg : styles.vid}
         ></video>
       </div>
     </div>
